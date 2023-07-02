@@ -1,23 +1,86 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <body className="App-header">
+        <div class="schedule">
+          <div class="days-row">
+            <div class="day">
+              Day 1
+            </div>
+            <div class="day">
+              Day 2
+            </div>
+            <div class="day">
+              Day 3
+            </div>
+            <div class="day">
+              Day 4
+            </div>
+            <div class="day">
+              Day 5
+            </div>
+            <div class="day">
+              Day 6
+            </div>
+            <div class="day">
+              Day 7
+            </div>
+          </div>
+          <div class="tasks-row">
+            <div class="task">
+              task 1
+              <br/>
+              task 2
+              <br/>
+              task 3
+            </div>
+            <div class="task">
+              task 1
+              <br/>
+              task 2
+              <br/>
+              task 3
+            </div>
+            <div class="task">
+              task 1
+              <br/>
+              task 2
+              <br/>
+              task 3
+            </div>
+            <div class="task">
+              task 1
+              <br/>
+              task 2
+              <br/>
+              task 3
+            </div>
+            <div class="task">
+              task 1
+              <br/>
+              task 2
+              <br/>
+              task 3
+            </div>
+            <div class="task">
+              task 1
+              <br/>
+              task 2
+              <br/>
+              task 3
+            </div>
+            <div class="task">
+              task 1
+              <br/>
+              task 2
+              <br/>
+              task 3
+            </div>
+          </div>
+        </div>
+      </body>
     </div>
   );
 }
