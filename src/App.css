@@ -27,7 +27,8 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 500px;
+  justify-content: center;
+  width: 700px;
 }
 
 .day{
@@ -42,13 +43,12 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 500px;
+  width: 700px;
 }
 
 .task{
   position: relative;
   padding-right: 20px;
-  color: rgb(255, 188, 111);
   width: 200px;
 }
 

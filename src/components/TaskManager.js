@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const TaskManager = () => {
 
-  let actualinput = {
-    //<input class="inputfield"/>
+    let [Actualinput,SetActualinput] = useState("");
   
+  let handleInput = event => {
+    SetActualinput(event.target.value)
+
   }
-  
 
   return (
     <div>
-      {actualinput}
+      <input class="inputfield" placeholder='Type here...' onChange = {handleInput}/>
+      {Actualinput}
     </div>
   )
 }

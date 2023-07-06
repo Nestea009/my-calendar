@@ -8,76 +8,76 @@ function App() {
         <div class="schedule">
           <div class="days-row">
             <div class="day">
-              Day 1
+              Monday
             </div>
             <div class="day">
-              Day 2
+              Tuesday
             </div>
             <div class="day">
-              Day 3
+              Wednesday
             </div>
             <div class="day">
-              Day 4
+              Thursday
             </div>
             <div class="day">
-              Day 5
+              Friday
             </div>
             <div class="day">
-              Day 6
+              Saturday
             </div>
             <div class="day">
-              Day 7
+              Sunday
             </div>
           </div>
           <div class="tasks-row">
             <div class="task">
-              task 1
+              <button>Task1</button>
               <br/>
-              task 2
+              <button>Task2</button>
               <br/>
-              task 3
+              <button>Task3</button>
             </div>
             <div class="task">
-              task 1
+              <button>Task1</button>
               <br/>
-              task 2
+              <button>Task2</button>
               <br/>
-              task 3
+              <button>Task3</button>
             </div>
             <div class="task">
-              task 1
+              <button>Task1</button>
               <br/>
-              task 2
+              <button>Task2</button>
               <br/>
-              task 3
+              <button>Task3</button>
             </div>
             <div class="task">
-              task 1
+              <button>Task1</button>
               <br/>
-              task 2
+              <button>Task2</button>
               <br/>
-              task 3
+              <button>Task3</button>
             </div>
             <div class="task">
-              task 1
+              <button>Task1</button>
               <br/>
-              task 2
+              <button>Task2</button>
               <br/>
-              task 3
+              <button>Task3</button>
             </div>
             <div class="task">
-              task 1
+              <button>Task1</button>
               <br/>
-              task 2
+              <button>Task2</button>
               <br/>
-              task 3
+              <button>Task3</button>
             </div>
             <div class="task">
-              task 1
+              <button>Task1</button>
               <br/>
-              task 2
+              <button>Task2</button>
               <br/>
-              task 3
+              <button>Task3</button>
             </div>
           </div>
           <TaskManager/>
