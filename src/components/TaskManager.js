@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
-export const TaskManager = () => {
 
-    let [Actualinput,SetActualinput] = useState("");
-  
+
+export const TaskManager = ({test_function}) => {
+
+  let [Actualinput,SetActualinput] = useState("");
+
   let handleInput = event => {
-    SetActualinput(event.target.value)
-
+    SetActualinput(event.target.value);
+    test_function(Actualinput);
   }
 
   return (
