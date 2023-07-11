@@ -4,14 +4,40 @@ import { TaskManager } from './components/TaskManager';
 
 function App() {
 
-  let [written_text,Setwritten_text] = useState("");
-
   let [text,Settext] = useState("");
 
   function setParentState(value) {
     Settext(value);
-    console.log(text);
   }
+
+  let [Task1M, SetTask1M] = useState("-");
+  let [Task2M, SetTask2M] = useState("-");
+  let [Task3M, SetTask3M] = useState("-");
+
+  let [Task1Tu, SetTask1Tu] = useState("-");
+  let [Task2Tu, SetTask2Tu] = useState("-");
+  let [Task3Tu, SetTask3Tu] = useState("-");
+
+  let [Task1W, SetTask1W] = useState("-");
+  let [Task2W, SetTask2W] = useState("-");
+  let [Task3W, SetTask3W] = useState("-");
+
+  let [Task1Th, SetTask1Th] = useState("-");
+  let [Task2Th, SetTask2Th] = useState("-");
+  let [Task3Th, SetTask3Th] = useState("-");
+
+  let [Task1F, SetTask1F] = useState("-");
+  let [Task2F, SetTask2F] = useState("-");
+  let [Task3F, SetTask3F] = useState("-");
+
+  let [Task1Sa, SetTask1Sa] = useState("-");
+  let [Task2Sa, SetTask2Sa] = useState("-");
+  let [Task3Sa, SetTask3Sa] = useState("-");
+
+  let [Task1Su, SetTask1Su] = useState("-");
+  let [Task2Su, SetTask2Su] = useState("-");
+  let [Task3Su, SetTask3Su] = useState("-");
+
 
   return (
     <div className="App">
@@ -42,53 +68,53 @@ function App() {
           </div>
           <div class="tasks-row">
             <div class="task">
-              <button>Task1</button>
+              <button onClick={() => SetTask1M(text)}>{Task1M}</button>
               <br/>
-              <button>Task2</button>
+              <button onClick={() => SetTask2M(text)}>{Task2M}</button>
               <br/>
-              <button>Task3</button>
+              <button onClick={() => SetTask3M(text)}>{Task3M}</button>
             </div>
             <div class="task">
-              <button onClick={() => Setwritten_text(text)}>{written_text}</button>
+              <button onClick={() => SetTask1Tu(text)}>{Task1Tu}</button>
               <br/>
-              <button>Task2</button>
+              <button onClick={() => SetTask2Tu(text)}>{Task2Tu}</button>
               <br/>
-              <button>Task3</button>
+              <button onClick={() => SetTask3Tu(text)}>{Task3Tu}</button>
             </div>
             <div class="task">
-              <button>Task1</button>
+              <button onClick={() => SetTask1W(text)}>{Task1W}</button>
               <br/>
-              <button>Task2</button>
+              <button onClick={() => SetTask2W(text)}>{Task2W}</button>
               <br/>
-              <button>Task3</button>
+              <button onClick={() => SetTask3W(text)}>{Task3W}</button>
             </div>
             <div class="task">
-              <button>Task1</button>
+              <button onClick={() => SetTask1Th(text)}>{Task1Th}</button>
               <br/>
-              <button>Task2</button>
+              <button onClick={() => SetTask2Th(text)}>{Task2Th}</button>
               <br/>
-              <button>Task3</button>
+              <button onClick={() => SetTask3Th(text)}>{Task3Th}</button>
             </div>
             <div class="task">
-              <button>Task1</button>
+              <button onClick={() => SetTask1F(text)}>{Task1F}</button>
               <br/>
-              <button>Task2</button>
+              <button onClick={() => SetTask2F(text)}>{Task2F}</button>
               <br/>
-              <button>Task3</button>
+              <button onClick={() => SetTask3F(text)}>{Task3F}</button>
             </div>
             <div class="task">
-              <button>Task1</button>
+              <button onClick={() => SetTask1Sa(text)}>{Task1Sa}</button>
               <br/>
-              <button>Task2</button>
+              <button onClick={() => SetTask2Sa(text)}>{Task2Sa}</button>
               <br/>
-              <button>Task3</button>
+              <button onClick={() => SetTask3Sa(text)}>{Task3Sa}</button>
             </div>
             <div class="task">
-              <button>Task1</button>
+              <button onClick={() => SetTask1Su(text)}>{Task1Su}</button>
               <br/>
-              <button>Task2</button>
+              <button onClick={() => SetTask2Su(text)}>{Task2Su}</button>
               <br/>
-              <button>Task3</button>
+              <button onClick={() => SetTask3Su(text)}>{Task3Su}</button>
             </div>
           </div>
           <TaskManager test_function={setParentState}/>
