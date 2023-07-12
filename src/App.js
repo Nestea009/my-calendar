@@ -10,6 +10,30 @@ function App() {
     Settext(value);
   }
 
+  function ResetFunction() {
+    SetTask1M("-")
+    SetTask2M("-")
+    SetTask3M("-")
+    SetTask1Tu("-")
+    SetTask2Tu("-")
+    SetTask3Tu("-")
+    SetTask1W("-")
+    SetTask2W("-")
+    SetTask3W("-")
+    SetTask1Th("-")
+    SetTask2Th("-")
+    SetTask3Th("-")
+    SetTask1F("-")
+    SetTask2F("-")
+    SetTask3F("-")
+    SetTask1Sa("-")
+    SetTask2Sa("-")
+    SetTask3Sa("-")
+    SetTask1Su("-")
+    SetTask2Su("-")
+    SetTask3Su("-")
+  }
+
   let [Task1M, SetTask1M] = useState("-");
   let [Task2M, SetTask2M] = useState("-");
   let [Task3M, SetTask3M] = useState("-");
@@ -42,6 +66,7 @@ function App() {
   return (
     <div className="App">
       <body className="App-header">
+        <h2>My-Calendar</h2>
         <div class="schedule">
           <div class="days-row">
             <div class="day">
@@ -117,7 +142,7 @@ function App() {
               <button onClick={() => SetTask3Su(text)}>{Task3Su}</button>
             </div>
           </div>
-          <TaskManager test_function={setParentState}/>
+          <TaskManager SetText={setParentState} Reset={ResetFunction}/>
         </div>
       </body>
     </div>

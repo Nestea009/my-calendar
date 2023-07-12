@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
 
-export const TaskManager = ({test_function}) => {
+export const TaskManager = ({SetText, Reset}) => {
 
   let [Actualinput,SetActualinput] = useState("");
 
@@ -14,13 +14,14 @@ export const TaskManager = ({test_function}) => {
   }
 
   if (value_changed == true) {
-    test_function(Actualinput);
+    SetText(Actualinput);
     value_changed = false;
   }
 
   return (
     <div>
       <input class="inputfield" placeholder='Type here...' onChange = {handleInput}/>
+      <button onClick = {Reset} class="ResetButton">Reset</button>
     </div>
   )
 }
