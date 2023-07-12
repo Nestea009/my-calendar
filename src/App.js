@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { TaskManager } from './components/TaskManager';
 
@@ -9,6 +9,10 @@ function App() {
   function setParentState(value) {
     Settext(value);
   }
+
+  localStorage.setItem('TaskM1', JSON.stringify('shit'))
+
+  const testl = localStorage.getItem('TaskM1');
 
   function ResetFunction() {
     SetTask1M("-")
@@ -34,7 +38,7 @@ function App() {
     SetTask3Su("-")
   }
 
-  let [Task1M, SetTask1M] = useState("-");
+  let [Task1M, SetTask1M] = useState(testl);
   let [Task2M, SetTask2M] = useState("-");
   let [Task3M, SetTask3M] = useState("-");
 
@@ -61,7 +65,6 @@ function App() {
   let [Task1Su, SetTask1Su] = useState("-");
   let [Task2Su, SetTask2Su] = useState("-");
   let [Task3Su, SetTask3Su] = useState("-");
-
 
   return (
     <div className="App">

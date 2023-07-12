@@ -6,16 +6,17 @@ export const TaskManager = ({SetText, Reset}) => {
 
   let [Actualinput,SetActualinput] = useState("");
 
-  let value_changed = true;
+  let [value_changed, setValue_changed] = useState(false);
 
   let handleInput = event => {
     SetActualinput(event.target.value);
-    value_changed = true;
+    setValue_changed(true);
+
   }
 
   if (value_changed == true) {
     SetText(Actualinput);
-    value_changed = false;
+    setValue_changed(false);
   }
 
   return (
