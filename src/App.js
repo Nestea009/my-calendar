@@ -1,8 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import { TaskManager } from './components/TaskManager';
 
 function App() {
+
+  let [theme,setTheme] = useState("dark");
+  let [ChangeTo,setChangeTo] = useState("Change to Dark Mode");
 
   function setParentState(value,task,setTask) {
     localStorage.setItem(task,value);
@@ -90,85 +93,86 @@ function App() {
 
   return (
     <div className="App">
-      <body className="App-header">
-        <h2>My-Calendar</h2>
+      <body className="App-header" style={{backgroundColor: (theme == "light") ? '#ffffff' : '#282c34'}}>
+        <h2 style={{color: (theme == "light") ? '#000000' : 'rgb(255, 159, 50)'}}>My-Calendar</h2>
         <div class="schedule">
           <div class="days-row">
-            <div class="day">
+            <div class="day" style={{color: (theme == "light") ? '#000000' : '#bababa'}}>
               Monday
             </div>
-            <div class="day">
+            <div class="day" style={{color: (theme == "light") ? '#000000' : '#bababa'}}>
               Tuesday
             </div>
-            <div class="day">
+            <div class="day" style={{color: (theme == "light") ? '#000000' : '#bababa'}}>
               Wednesday
             </div>
-            <div class="day">
+            <div class="day" style={{color: (theme == "light") ? '#000000' : '#bababa'}}>
               Thursday
             </div>
-            <div class="day">
+            <div class="day" style={{color: (theme == "light") ? '#000000' : '#bababa'}}>
               Friday
             </div>
-            <div class="day">
+            <div class="day" style={{color: (theme == "light") ? '#000000' : '#bababa'}}>
               Saturday
             </div>
-            <div class="day">
+            <div class="day" style={{color: (theme == "light") ? '#000000' : '#bababa'}}>
               Sunday
             </div>
           </div>
           <div class="tasks-row">
             <div class="task">
-              <button onClick={() => setParentState(Actualinput, "Task1M", SetTask1M)}>{Task1M}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task1M", SetTask1M)}>{Task1M}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task2M", SetTask2M)}>{Task2M}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task2M", SetTask2M)}>{Task2M}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task3M", SetTask3M)}>{Task3M}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task3M", SetTask3M)}>{Task3M}</button>
             </div>
             <div class="task">
-              <button onClick={() => setParentState(Actualinput, "Task1Tu", SetTask1Tu)}>{Task1Tu}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task1Tu", SetTask1Tu)}>{Task1Tu}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task2Tu", SetTask2Tu)}>{Task2Tu}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task2Tu", SetTask2Tu)}>{Task2Tu}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task3Tu", SetTask3Tu)}>{Task3Tu}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task3Tu", SetTask3Tu)}>{Task3Tu}</button>
             </div>
             <div class="task">
-              <button onClick={() => setParentState(Actualinput, "Task1W", SetTask1W)}>{Task1W}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task1W", SetTask1W)}>{Task1W}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task2W", SetTask2W)}>{Task2W}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task2W", SetTask2W)}>{Task2W}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task3W", SetTask3W)}>{Task3W}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task3W", SetTask3W)}>{Task3W}</button>
             </div>
             <div class="task">
-              <button onClick={() => setParentState(Actualinput, "Task1Th", SetTask1Th)}>{Task1Th}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task1Th", SetTask1Th)}>{Task1Th}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task2Th", SetTask2Th)}>{Task2Th}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task2Th", SetTask2Th)}>{Task2Th}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task3Th", SetTask3Th)}>{Task3Th}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task3Th", SetTask3Th)}>{Task3Th}</button>
             </div>
             <div class="task">
-              <button onClick={() => setParentState(Actualinput, "Task1F", SetTask1F)}>{Task1F}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task1F", SetTask1F)}>{Task1F}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task2F", SetTask2F)}>{Task2F}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task2F", SetTask2F)}>{Task2F}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task3F", SetTask3F)}>{Task3F}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task3F", SetTask3F)}>{Task3F}</button>
             </div>
             <div class="task">
-              <button onClick={() => setParentState(Actualinput, "Task1Sa", SetTask1Sa)}>{Task1Sa}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task1Sa", SetTask1Sa)}>{Task1Sa}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task2Sa", SetTask2Sa)}>{Task2Sa}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task2Sa", SetTask2Sa)}>{Task2Sa}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task3Sa", SetTask3Sa)}>{Task3Sa}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task3Sa", SetTask3Sa)}>{Task3Sa}</button>
             </div>
             <div class="task">
-              <button onClick={() => setParentState(Actualinput, "Task1Su", SetTask1Su)}>{Task1Su}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task1Su", SetTask1Su)}>{Task1Su}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task2Su", SetTask2Su)}>{Task2Su}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task2Su", SetTask2Su)}>{Task2Su}</button>
               <br/>
-              <button onClick={() => setParentState(Actualinput, "Task3Su", SetTask3Su)}>{Task3Su}</button>
+              <button style={{backgroundColor: (theme == "light") ? 'lightgrey' : 'black', color: (theme == "light") ? 'black': 'rgb(255, 159, 50)'}} onClick={() => setParentState(Actualinput, "Task3Su", SetTask3Su)}>{Task3Su}</button>
             </div>
           </div>
-          <TaskManager handleInput={handleInput} Reset={ResetFunction}/>
+          <TaskManager handleInput={handleInput} Reset={ResetFunction} theme={theme}/>
         </div>
+        <button class="ChangeThemeButton" onClick = {ResetFunction} style={{ backgroundColor: (theme == "light") ? 'lightgray' : 'black', color: (theme == "light") ? 'black' : 'rgb(255, 159, 50)' }}>{ChangeTo}</button>
       </body>
     </div>
   );
