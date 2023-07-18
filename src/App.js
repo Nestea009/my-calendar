@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { TaskManager } from './components/TaskManager';
 
 function App() {
 
   let [theme,setTheme] = useState("dark");
-  let [ChangeTo,setChangeTo] = useState("Change to Dark Mode");
+  let [ChangeTo,setChangeTo] = useState("Change to Light Mode");
 
   function setParentState(value,task,setTask) {
     localStorage.setItem(task,value);
@@ -16,6 +16,17 @@ function App() {
 
   let handleInput = event => {
     SetActualinput(event.target.value);
+  }
+
+  let toggle = event => {
+    if (theme == "light"){
+      setTheme("dark")
+      setChangeTo("Change to Light Mode")
+    }
+    if (theme == "dark"){
+      setTheme("light")
+      setChangeTo("Change to Dark Mode")
+    }
   }
 
   function ResetFunction() {
@@ -172,7 +183,7 @@ function App() {
           </div>
           <TaskManager handleInput={handleInput} Reset={ResetFunction} theme={theme}/>
         </div>
-        <button class="ChangeThemeButton" onClick = {ResetFunction} style={{ backgroundColor: (theme == "light") ? 'lightgray' : 'black', color: (theme == "light") ? 'black' : 'rgb(255, 159, 50)' }}>{ChangeTo}</button>
+        <button onClick={toggle} class="ChangeThemeButton" style={{ backgroundColor: (theme == "light") ? 'lightgray' : 'black', color: (theme == "light") ? 'black' : 'rgb(255, 159, 50)'}}>{ChangeTo}</button>
       </body>
     </div>
   );
